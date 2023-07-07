@@ -2,7 +2,6 @@
 
 Update an allow_list using Python 
 
-##Update a file through a Python algorithm
 
 Project description:
 
@@ -12,7 +11,7 @@ addresses that should no longer have access to this content. I created an algori
 automate updating the "allow_list.txt" file and remove these IP addresses that should
 no longer have access. 
 
-##First opened the file that contains the allow list:
+First opened the file that contains the allow list:
 
 For the first part of the algorithm, I opened the "allow_list.txt" file. First, I assigned this
 file name as a string to the import_file variable:
@@ -20,7 +19,7 @@ file name as a string to the import_file variable:
 ![image](https://github.com/MarcoSantibanez/Update-a-File-Through-a-Python-Algorithm/assets/138132151/675ddbb8-f698-4f68-9f21-39e7793e96c3)
 
 
-##Then, I used a *with* statement to open the file:
+Then, I used a *with* statement to open the file:
 
 ![image](https://github.com/MarcoSantibanez/Update-a-File-Through-a-Python-Algorithm/assets/138132151/d4f86af2-c576-439e-9502-4a4801a5a785)
 
@@ -35,7 +34,7 @@ case, "r" indicates that I want to read it. The code also uses the as keyword to
 variable named file; file stores the output of the *.open()* function while I work within the
 with statement.
 
-##Read the file contents
+**Read the file contents**
 
 In order to read the file contents, I used the *.read()* method to convert it into the string:
 
@@ -50,7 +49,7 @@ In summary, this code reads the contents of the "allow_list.txt" file into a str
 that allows me to later use the string to organize and extract data in my Python program.
 
 
-##Convert the string into a list
+**Convert the string into a list**
 
 ![image](https://github.com/MarcoSantibanez/Update-a-File-Through-a-Python-Algorithm/assets/138132151/5c14d88e-d5f5-4a14-814a-4919ebe57355)
 
@@ -66,7 +65,7 @@ stored in the variable ip_addresses, which is a string of IP addresses that are 
 separated by a whitespace, and it converts this string into a list of IP addresses. To store this
 list, I reassigned it back to the variable ip_addresses.
 
-##Iterate through the remove list
+**Iterate through the remove list**
 
 A key part of my algorithm involves iterating through the IP addresses that are elements in the
 *remove_list*. To do this, I incorporated a for loop:
@@ -80,7 +79,7 @@ sequence. The for keyword starts the for loop. It is followed by the loop variab
 and the keyword in. The keyword in indicates to iterate through the sequence
 ip_addresses and assign each value to the loop variable element.
 
-##Remove IP addresses that are on the remove list
+**Remove IP addresses that are on the remove list**
 
 My algorithm requires removing any IP address from the allow list, ip_addresses, that is also
 contained in remove_list. Because there were not any duplicates in ip_addresses, I was
@@ -96,7 +95,7 @@ Then, within that conditional, I applied .remove() to ip_addresses. I passed in 
 variable element as the argument so that each IP address that was in the remove_list
 would be removed from ip_addresses.
 
-##Update the file with the revised list of IP addresses
+**Update the file with the revised list of IP addresses**
 
 As a final step in my algorithm, I needed to update the allow list file with the revised list of IP
 addresses. To do so, I first needed to convert the list back into a string. I used the *.join()*
@@ -128,7 +127,7 @@ object file that I identified in the with statement. I passed in the ip_addresse
 the argument to specify that the contents of the file specified in the with statement should
 be replaced with the data in this variable.
 
-##Summary:
+**Summary:**
 
 I created an algorithm that removes IP addresses identified in a remove_list variable from
 the "allow_list.txt" file of approved IP addresses. This algorithm involved opening the
